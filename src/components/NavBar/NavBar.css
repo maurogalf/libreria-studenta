@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    list-style: none;
+    text-decoration: none;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+header {
+    background-color: white;
+    color: black;
+    overflow: hidden; 
+    display: flex;
+    border: 1px red;
+}
+a:link {
+    text-decoration: none;
+    color: #8b8a89;
+}
+a:hover{
+    cursor: pointer;
+}
+a:visited {
+    color: #525252;
+}
+nav {
+    width: 60vw;
+    display: inline-flex;
+    padding: 3.5rem 1rem 3.5rem 1rem;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+nav ul li {
+    padding: 0px 2vw 0px 0px;
+    display: inline-block;
+    position: relative;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li a:hover {
+    color: #2241c7;
+}
+ul li:hover ul {
+    display: block;
+    width: 100%;
+    background-color: black;
+    padding: 0px;
+}
+.logo {
+    float: left;
+    padding: 20px; }
+
+.logo__img {
+    width: 100%; 
+}
+.buscador {
+    float: right;
+    padding: 3.5rem 2rem 3.5rem 0px; 
+    display: flex;
+}
+.buscador__ingresetexto {
+    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
+    background-size: 24px;
+    width: 200px;
+    border: transparent;
+    border-bottom: solid 1px #ccc;
+    padding: 10px 10px 10px 30px;
+    outline: none;
+}
+.buscador__enviar {
+    background-color: #2241c7;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+.buscador__enviar:active{
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
