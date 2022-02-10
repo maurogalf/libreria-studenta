@@ -1,24 +1,26 @@
 import './NavBar.css'
+import CartWidget from './CartWidget'
 
 const NavBar = () =>{
     return(
-        <header>
-            <div class="logo">
-                <img class="logo__img" src="./logo.png" alt="logo Studenta"/>
+        <div>
+            <div className="logo">
+                <img className="logo__img" src="./logo.png" alt="logo Studenta"/>
             </div>
-            <nav class="nav">
+            <nav className="nav">
                 <ul>
-                <li><a>Inicio</a></li>
-                <li><a>Productos</a></li>
-                <li><a>Quienes Somos</a></li>
-                <li><a>Contacto</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Quienes Somos</a></li>
+                <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
-            <form id="buscador" class="buscador">
-                <input placeholder="Buscar articulos" class="buscador__ingresetexto" type="text" name="search"/>
-                <input href="resultado-busqueda.html"type="submit" class="buscador__enviar" value="Buscar" name="buscar"/>
+            <form id="buscador" className="buscador">
+                <input placeholder="Buscar articulos" className="buscador__ingresetexto" type="text" name="search"/>
+                <input href="resultado-busqueda.html"type="submit" className="buscador__enviar" value="Buscar" name="buscar"/>
+            <CartWidget/>
             </form>
-        </header>
+        </div>
     )
 }
 

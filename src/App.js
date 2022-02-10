@@ -1,10 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
 
+import ItemListContainer from './components/NavBar/ItemListContainer'
+
 function App() {
   return (
-    <NavBar/>
+    <div className="App">
+      <header className="header">
+        <NavBar/>
+      </header>
+      <main>
+        <ItemListContainer greeting="Bienvenidos a La Librería."/>
+      </main>
+    </div>
   );
 }
 

@@ -1,7 +1,12 @@
 .App {
   text-align: center;
 }
+.header {
+  display: flex;
+  vertical-align: auto;
+  align-items: center;
 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
