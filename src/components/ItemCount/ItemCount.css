@@ -1,0 +1,69 @@
+.tarjetaproducto {
+    text-align: center;
+    background-color: #f2f2f2;
+    display: inline-flex;
+    padding: 10px;
+    margin: 10px;
+    height: min-content;
+    border-radius: 5px;
+}
+.tarjetaproducto__foto {
+    max-height: 250px;
+}
+.tarjetaproducto__nombre {
+    max-width: inherit;
+    font-size: 1rem;
+    padding: 1rem 0px;
+    }
+.tarjetaproducto__precio {
+    font-size: 1.5rem;
+    letter-spacing: 110%;
+    padding-bottom: 1rem;
+    }
+.tarjetaproducto__precio--oferta {
+    font-style: bold;
+    text-decoration: line-through;
+    }
+.tarjetaproducto__boton {
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    background-color: white;
+    color: #8b8a89;
+    border-radius: 5px;
+    }
+.tarjetaproducto__boton:hover {
+    background-color: #f2f2f2;
+    color: black;
+    cursor: pointer;
+    }
+
+    .tarjetaproducto:hover {
+    background-color: #d5d5d5;
+    }
+    .tarjetaproducto:hover div h4,
+    .tarjetaproducto:hover div h3 {
+    background-color: #d5d5d5;
+    color: black;
+    }
+.cant-selec{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+
+}
+.cant-compra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cant-mod-bot{
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.cant-eleg {
+    font-size: 2rem;
+}
