@@ -1,0 +1,11 @@
+.catalogo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5vw;
+    padding: 0 10vw;
+}
+.catalogo__titulo {
+    font-size: 2rem;
+}

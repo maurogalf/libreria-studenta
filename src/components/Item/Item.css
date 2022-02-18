@@ -6,6 +6,8 @@
     margin: 10px;
     height: min-content;
     border-radius: 5px;
+    width: 400px ;
+    justify-content: center;
 }
 .tarjetaproducto__foto {
     max-height: 250px;
