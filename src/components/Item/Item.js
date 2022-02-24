@@ -1,6 +1,5 @@
-import ItemCount from "../ItemCount/ItemCount.js"
 import './Item.css'
-
+import { Link } from 'react-router-dom'
 
 export default function Item({product}) {
 
@@ -13,8 +12,7 @@ return(
         <h3 className="tarjetaproducto__nombre">{product.nombre}</h3>
         <h4 className="tarjetaproducto__precio">${product.precio}</h4>
         <div className ="cant-compra">
-            <ItemCount stock={product.stock}/>
-            <button className="tarjetaproducto__boton">Comprar</button>
+            <Link to ={`/item/${product.id}`}><button className="tarjetaproducto__boton">Comprar</button></Link>
         </div>
     </div>
 </article>
