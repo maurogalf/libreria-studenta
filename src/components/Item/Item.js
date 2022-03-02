@@ -12,7 +12,7 @@ return(
         <h3 className="tarjetaproducto__nombre">{product.nombre}</h3>
         <h4 className="tarjetaproducto__precio">${product.precio}</h4>
         <div className ="cant-compra">
-            <Link to ={`/item/${product.id}`}><button className="tarjetaproducto__boton">Comprar</button></Link>
+            <Link to ={`/item/${product.id}`}><button className="tarjetaproducto__boton">Ver más</button></Link>
         </div>
     </div>
 </article>

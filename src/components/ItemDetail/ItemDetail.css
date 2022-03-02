@@ -38,6 +38,12 @@
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     cursor: pointer;
+}
+.agregadoCarrito {
+    font-size: 24px;
+    border: solid grey 0.5px;
+    padding: 24px;
+    border-radius: 5px;
 }

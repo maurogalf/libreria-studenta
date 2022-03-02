@@ -14,7 +14,7 @@ export default function ItemList({categoria}) {
             baseProductos(products).then(res=> setProducts(res))
         };
     
-    });
+    },[]);
     
     const baseProductos = (productos) =>{
     return new Promise((res, rej)=>{
