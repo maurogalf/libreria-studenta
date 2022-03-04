@@ -28,7 +28,7 @@
     height: 500px;
     justify-content: space-around;
     padding-left: 20px;
-    border-left: solid 1px grey;
+    border-left: solid 1px rgb(219, 219, 219);
 }
 .botonProducto-comprar {
     background-color: #2241c7;
@@ -41,9 +41,13 @@
     font-size: 24px;
     cursor: pointer;
 }
+.botonProducto-comprar:disabled {
+    background-color: grey;
+    cursor: default;
+}
 .agregadoCarrito {
     font-size: 24px;
-    border: solid grey 0.5px;
+    border: solid rgb(219, 219, 219) 0.5px;
     padding: 24px;
     border-radius: 5px;
 }

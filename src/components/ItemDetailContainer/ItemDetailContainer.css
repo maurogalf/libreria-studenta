@@ -1,3 +1,7 @@
 h1 {
     margin: 5vh;
 }
+.itemDetailContainer {
+    border: solid 0.5px rgb(219, 219, 219);
+    box-shadow: 2px;
+}

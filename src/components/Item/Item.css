@@ -27,7 +27,7 @@
     text-decoration: line-through;
     }
 .tarjetaproducto__boton {
-    padding: 0.2rem;
+    padding: 0.2rem 1rem;
     font-size: 1.5rem;
     background-color: white;
     color: #8b8a89;

@@ -1,9 +1,12 @@
 import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount.js"
 import { Link } from "react-router-dom"
+import React, {useContext} from 'react';
+import { CartContext } from '../../Context/CartContext/CartContext';
 
-export default function ItemDetail({producto, sum, rest, count, agregaCarrito, visibleCount}) {
+export default function ItemDetail({producto, sum, rest, count, visibleCount}) {
     const {id, nombre, detalle, precio, stock, img} = producto
+    const {addItem} = useContext(CartContext);
     return (
         <div className="detalleProducto-pagina">  
             <div className="detalleProducto-contenedor">
@@ -17,7 +20,7 @@ export default function ItemDetail({producto, sum, rest, count, agregaCarrito, v
                         visibleCount ?
                         <>
                         <ItemCount stock={stock} sum={sum} rest={rest} count={count}/>
-                        <button disabled={count === 0} onClick={agregaCarrito} className="botonProducto-comprar">Agregar</button>
+                        <button disabled={count === 0} onClick={()=>addItem(producto, count)} className="botonProducto-comprar">Agregar</button>
                         </>
                         :
                         <>
