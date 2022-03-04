@@ -4,13 +4,13 @@ import { Link } from "react-router-dom"
 import React, {useContext} from 'react';
 import { CartContext } from '../../Context/CartContext/CartContext';
 
-export default function ItemDetail({producto, sum, rest, count, visibleCount}) {
+export default function ItemDetail({producto, sum, rest, count, agregaCarrito, visibleCount}) {
     const {id, nombre, detalle, precio, stock, img} = producto
     const {addItem} = useContext(CartContext);
     return (
         <div className="detalleProducto-pagina">  
             <div className="detalleProducto-contenedor">
-                <img src={img}/>
+                <img src={img} alt={nombre}/>
                 <div className="detalleProducto-descripcion">
                     <h2>{nombre}</h2>
                     <p>{detalle}</p>
@@ -20,7 +20,7 @@ export default function ItemDetail({producto, sum, rest, count, visibleCount}) {
                         visibleCount ?
                         <>
                         <ItemCount stock={stock} sum={sum} rest={rest} count={count}/>
-                        <button disabled={count === 0} onClick={()=>addItem(producto, count)} className="botonProducto-comprar">Agregar</button>
+                        <button disabled={count === 0} onClick={()=>{addItem(producto, count); agregaCarrito()}} className="botonProducto-comprar">Agregar</button>
                         </>
                         :
                         <>

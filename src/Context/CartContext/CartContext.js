@@ -6,16 +6,19 @@ export const CartContext = createContext();
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
     const [qCart, setQCart] = useState(0);
-    const [visibleCount, setVisibleCount] = useState(true);
 
-
-    const agregaCarrito =()=>{
-        setVisibleCount(false);
-        console.log("se agrega al carrito")
+    const cleanCart = ()=> {
+        setCart([]);
     }
 
+    const removeItem = (id, cant)=>{
+        setQCart(qCart - cant)
+        const aux = cart.filter(product=>product.id !== id)
+        setCart(aux);
+    }
+
+
     const addItem = (producto, cant) =>{
-        agregaCarrito();
         setQCart(qCart + cant);
         if (cart.some(product=>product.id === producto.id)){
             const aux = [...cart];
@@ -24,14 +27,10 @@ export const CartProvider = ({children}) => {
             setCart(aux);
         }else {
             setCart([...cart, {...producto, cant}]);
-            console.log("no esta el mismo")
         }
-        console.log(cart);
-        console.log(qCart);
-
     };
 
     return (
-        <CartContext.Provider value={{visibleCount, cart, qCart, addItem}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{cart, qCart, addItem, removeItem, cleanCart}}>{children}</CartContext.Provider>
     )   
 }

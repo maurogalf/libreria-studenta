@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    list-style: none;
+    text-decoration: none;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh;
+    font-size: 24px;
+}
+.carrito table {
+    width: 80vw;
+}
+.carrito th {
+    border-bottom: 1px solid black;
+}
+.carrito img {
+    max-width: 100px;
+    margin: 15px;
+}
+.linea-carrito:hover {
+    background-color: grey;
+}
+.tb-r {
+    text-align: right;
+}
+.tb-l {
+    text-align: left;
+}
+.tb-c {
+    text-align: center;
+}
+.vaciarCarrito {
+    display: flex;
+    float: right;
+}
+.btn-vaciarCarrito {
+    margin-top: 10vh;
+    background-color: #2241c7;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+.btn-vaciarCarrito:hover {
+    background-color: grey;
+
+}
+.btn-remItem {
+    padding: 15px 20px;
+    font-size: 24px;
+    border-radius: 40px;
+    background-color: red;
+    cursor: pointer;
+}
