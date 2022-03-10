@@ -21,7 +21,7 @@
 .carrito th {
     border-bottom: 1px solid black;
 }
-.carrito img {
+.table img {
     max-width: 100px;
     margin: 15px;
 }
@@ -62,4 +62,7 @@
     border-radius: 40px;
     background-color: red;
     cursor: pointer;
+}
+.emptyCartImage {
+    width: 20vw;
 }

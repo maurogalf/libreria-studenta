@@ -7,14 +7,14 @@ export default function ItemList({categoria}) {
     const [productos, setProducts] = useState([]);
 
     useEffect(() => {
-        if(categoria!=undefined){
+        if(categoria!==undefined){
             const filtroProductos = products.filter((filtro)=>filtro.categoria === categoria);
             baseProductos(filtroProductos).then(res=> setProducts(res))
         } else {
             baseProductos(products).then(res=> setProducts(res))
         };
     
-    },[]);
+    },[categoria]);
     
     const baseProductos = (productos) =>{
     return new Promise((res, rej)=>{
@@ -26,7 +26,7 @@ return (
     <div>
         <h2 className='catalogo__titulo'>Catálogo {categoria}</h2>
         <div className='catalogo'>
-        {!productos?.length ? <p>Cargando...</p> : <>{productos.map(product =>(<Item key={product.id} product= {product}/>))}</>}
+        {!productos?.length ? <img className='loading' src='../loading.gif' alt='Loading'/> : <>{productos.map(product =>(<Item key={product.id} product= {product}/>))}</>}
         </div>
     </div>
 );

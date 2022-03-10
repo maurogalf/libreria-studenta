@@ -6,9 +6,9 @@ export const CartContext = createContext();
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
     const [qCart, setQCart] = useState(0);
-
     const cleanCart = ()=> {
         setCart([]);
+        setQCart(0);
     }
 
     const removeItem = (id, cant)=>{

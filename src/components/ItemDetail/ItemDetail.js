@@ -1,3 +1,4 @@
+import "../../Styles/styles.css"
 import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount.js"
 import { Link } from "react-router-dom"
@@ -8,13 +9,17 @@ export default function ItemDetail({producto, sum, rest, count, agregaCarrito, v
     const {id, nombre, detalle, precio, stock, img} = producto
     const {addItem} = useContext(CartContext);
     return (
-        <div className="detalleProducto-pagina">  
+        <>
+            {
+            id 
+            ?  
+        <div className="detalleProducto-pagina">
             <div className="detalleProducto-contenedor">
                 <img src={img} alt={nombre}/>
                 <div className="detalleProducto-descripcion">
                     <h2>{nombre}</h2>
                     <p>{detalle}</p>
-                    <h2>${precio}</h2>                    
+                    <h2>${Intl.NumberFormat("de-DE").format(precio)}</h2>                    
                     <h4>{stock} disponibles.</h4>
                     {
                         visibleCount ?
@@ -30,6 +35,9 @@ export default function ItemDetail({producto, sum, rest, count, agregaCarrito, v
                     }   
                 </div>
             </div>
-            
         </div>
+            :
+            <img className='loading' src='../loading.gif' alt='Loading'/>
+            }
+            </>
     )}
