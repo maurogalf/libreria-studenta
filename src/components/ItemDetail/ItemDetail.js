@@ -6,7 +6,7 @@ import React, {useContext} from 'react';
 import { CartContext } from '../../Context/CartContext/CartContext';
 
 export default function ItemDetail({producto, sum, rest, count, agregaCarrito, visibleCount}) {
-    const {id, nombre, detalle, precio, stock, img} = producto
+    const {id, nombre, desc, precio, stock, img} = producto
     const {addItem} = useContext(CartContext);
     return (
         <>
@@ -18,7 +18,7 @@ export default function ItemDetail({producto, sum, rest, count, agregaCarrito, v
                 <img src={img} alt={nombre}/>
                 <div className="detalleProducto-descripcion">
                     <h2>{nombre}</h2>
-                    <p>{detalle}</p>
+                    <p>{desc}</p>
                     <h2>${Intl.NumberFormat("de-DE").format(precio)}</h2>                    
                     <h4>{stock} disponibles.</h4>
                     {

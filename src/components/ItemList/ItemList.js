@@ -1,26 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import Item from '../Item/Item.js'
 import './ItemList.css'
-import { products } from '../../data/products'
+import { collection, getDocs} from 'firebase/firestore'
+import db from '../../utils/firebase'
 
 export default function ItemList({categoria}) {
     const [productos, setProducts] = useState([]);
 
-    useEffect(() => {
-        if(categoria!==undefined){
-            const filtroProductos = products.filter((filtro)=>filtro.categoria === categoria);
-            baseProductos(filtroProductos).then(res=> setProducts(res))
-        } else {
-            baseProductos(products).then(res=> setProducts(res))
-        };
-    
-    },[categoria]);
-    
-    const baseProductos = (productos) =>{
-    return new Promise((res, rej)=>{
-    setTimeout(()=>{res(productos)},2000)
-    })
-}
+    useEffect(() => { categoria !== undefined ? getDataCategory(): getData()},[categoria]);
+
+    const getData = async () => {
+        try {
+            const itemsCollection = collection(db, "items")
+            const col = await getDocs(itemsCollection)
+            const result = col.docs.map((doc) => doc = {id:doc.id, ...doc.data()})
+            setProducts(result)
+        } catch (error) {
+            console.log('error', error);
+        }
+    }
+
+    const getDataCategory = async () => {
+        try {
+            const itemsCollection = collection(db, "items")
+            const col = await getDocs(itemsCollection)
+            const result = col.docs.map((doc) => doc = {id:doc.id, ...doc.data()})
+            setProducts(result.filter(e=>e.categoria === categoria))
+        } catch (error) {
+            console.log('error', error);
+        }
+    }
+
+
+
 
 return (
     <div>

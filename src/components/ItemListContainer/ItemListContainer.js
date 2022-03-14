@@ -2,6 +2,7 @@ import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList.js'
 import { useParams } from 'react-router-dom'
 
+
 const ItemListContainer = (props) =>{
     const categoryId = useParams();
     let categoria = categoryId.categoryId;
