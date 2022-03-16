@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore';
+import { addDoc, collection, getFirestore, Timestamp } from 'firebase/firestore';
 
 
 
@@ -16,5 +16,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
+
+export const generateOrder = async (orden) =>{
+    const newOrder = addDoc(collection(db, "orders"), {
+        ...orden,
+        fecha: Timestamp.fromDate(new Date)
+    })
+    return newOrder;
+}
 
 export default db;

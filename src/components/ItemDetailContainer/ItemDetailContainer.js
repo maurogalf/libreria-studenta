@@ -26,14 +26,8 @@ export default function ItemDetailContainer() {
 
 
     useEffect(() => {
-        // baseProductos().then(res=> setProducts(res))
         getItem();
     },[itemId]);
-
-    // const baseProductos = () =>{
-    //     const producto = products.find((product)=>product.id === itemId);
-    //     return new Promise((res, rej)=>{
-    //     setTimeout(()=>{res(producto)},2000)})}
 
     const getItem = async () => {
         try {

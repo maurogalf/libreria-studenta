@@ -1,16 +1,60 @@
 import './Cart.css';
 import { Link } from 'react-router-dom'; 
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { CartContext } from '../../Context/CartContext/CartContext';
+import Swal from 'sweetalert2'
+import { generateOrder } from '../../utils/firebase';
+
+const initialBuyer = {
+    nombre: "",
+    apellido: "",
+    telefono: "",
+    email: ""
+}
 
 export default function Cart() {
     const {qCart, cart, removeItem, cleanCart} = useContext(CartContext);
+    const [buyer, setBuyer] = useState(initialBuyer)
+    
+    const handlerChange = (e)=> {
+        setBuyer({... buyer, [e.target.name]: e.target.value})
+    }
+
+    const handlerSubmit = (e)=>{
+        e.preventDefault();
+        if(buyer.nombre !== "" && buyer.apellido !== "" && buyer.telefono !== "" && buyer.email !== ""){
+            generateOrder(orden)
+            .then((res)=>{
+                new Swal({
+                    title: `Felicitaciones ${buyer.nombre}! Tu orden fue enviada con exito.`,
+                    text: `Numero de identificador de orden es: ${res.id}`,
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar',
+                }).then(cleanCart())
+            })
+        }else {
+            new Swal({
+                title: 'Atencion!',
+                text: 'Debe completar todos los campos',
+                icon: 'error'
+            })}
+    }
+
     let sum = 0;
     for (let i = 0; i < cart.length; i++){
         sum += cart[i].cant * cart[i].precio;
     }
+
+    const orden = {
+        buyer,
+        cart,
+        sum
+    }
+
+
     return (
         <div className='carrito'>
+            
             {cart.length === 0 ? (
                 <>
                 <h1>El carrito se encuentra vacío.</h1>
@@ -19,6 +63,7 @@ export default function Cart() {
                 </>)
                 :
                 <>
+                <h2>Carrito de compras</h2>
                 <table className="table">
                 <thead>
                 <tr>
@@ -54,8 +99,32 @@ export default function Cart() {
                 </tr>
                     </tbody>
                     </table>
-        <button className='btn-vaciarCarrito' onClick={()=>cleanCart()}>Limiar Carrito</button>
-                    </>}
+        <form 
+            onSubmit={handlerSubmit}
+            onChange={handlerChange}
+            className='formulario'>
+            <div class="formulario__campos">
+                <div class="formulario__campos--izq">
+                    <label>Nombre: </label><input type="text" name="nombre"/>
+                </div>
+                <div class="formulario__campos--izq">
+                    <label>Apellido: </label><input type="text" name="apellido"/>
+                </div>
+            </div>
+            <div class="formulario__campos">
+                <div class="formulario__campos--izq">
+                    <label>Teléfono: </label><input type="number" name="telefono"/>
+                </div>
+                <div class="formulario__campos--izq">
+                    <label>Email: </label><input type="text" name="email"/>
+                </div>
+            </div>
+            <div class="formulario__campos">
+                <div class="formulario__campos--cen"><button className='btn-vaciarCarrito'>Enviar Orden</button></div>
+                <div class="formulario__campos--cen"><button className='btn-vaciarCarrito' onClick={()=>cleanCart()}>Vaciar Carrito</button></div>
+            </div>
+        </form>
+        </>}
         </div>);
 }
 

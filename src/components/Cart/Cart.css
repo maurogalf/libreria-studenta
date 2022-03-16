@@ -17,9 +17,14 @@
 }
 .carrito table {
     width: 80vw;
+    border-collapse: collapse;
+    margin-top: 30px;
 }
 .carrito th {
     border-bottom: 1px solid black;
+}
+.carrito h2 {
+    font-size: 2rem;
 }
 .table img {
     max-width: 100px;
@@ -54,6 +59,7 @@
 }
 .btn-vaciarCarrito:hover {
     background-color: grey;
+    cursor: pointer;
 
 }
 .btn-remItem {
@@ -66,3 +72,37 @@
 .emptyCartImage {
     width: 20vw;
 }
+.formulario {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    max-width: 50vw; }
+.formulario input {
+    background-size: 24px;
+    font-size: 1.5rem;
+    width: 200px;
+    border: transparent;
+    border-bottom: solid 1px #ccc;
+    padding: 10px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+.formulario__campos {
+    padding: 15px;
+    display: flex;
+    flex-direction: row; }
+.formulario__campos--izq {
+    width: 20em;
+    text-align: left; }
+.formulario__campos--cen {
+    width: 20em;
+    justify-content: center; }
+.formulario__campos--der {
+    width: 20em;
+    text-align: right; }
+.formulario__campos label {
+    display: inline-flex;
+    width: 7rem; }
