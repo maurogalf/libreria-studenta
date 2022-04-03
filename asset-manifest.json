@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/libreria-studenta/static/css/main.bd23b7d6.css",
-    "main.js": "/libreria-studenta/static/js/main.247da401.js",
+    "main.js": "/libreria-studenta/static/js/main.dc336468.js",
     "static/js/787.dd3c25af.chunk.js": "/libreria-studenta/static/js/787.dd3c25af.chunk.js",
     "index.html": "/libreria-studenta/index.html",
     "main.bd23b7d6.css.map": "/libreria-studenta/static/css/main.bd23b7d6.css.map",
-    "main.247da401.js.map": "/libreria-studenta/static/js/main.247da401.js.map",
+    "main.dc336468.js.map": "/libreria-studenta/static/js/main.dc336468.js.map",
     "787.dd3c25af.chunk.js.map": "/libreria-studenta/static/js/787.dd3c25af.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bd23b7d6.css",
-    "static/js/main.247da401.js"
+    "static/js/main.dc336468.js"
   ]
 }
