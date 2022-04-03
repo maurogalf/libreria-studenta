@@ -31,7 +31,10 @@
     margin: 15px;
 }
 .linea-carrito:hover {
-    background-color: grey;
+    background-color: lightgrey;
+}
+.linea-total {
+    margin-top: 1px;
 }
 .tb-r {
     text-align: right;
@@ -62,10 +65,15 @@
     cursor: pointer;
 
 }
+.verArticulo:hover {
+    text-decoration: underline;
+    color: black;
+}
 .btn-remItem {
     padding: 15px 20px;
     font-size: 24px;
-    border-radius: 40px;
+    border-radius: 50px;
+    border: none;
     background-color: red;
     cursor: pointer;
 }
@@ -73,12 +81,19 @@
     width: 20vw;
 }
 .formulario {
+    margin-top: 10vh;
     background-color: #f2f2f2;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 15px;
     max-width: 50vw; }
+
+.formulario__titulo {
+    font-size: 2rem;
+    margin-bottom: 2vh;
+}
+
 .formulario input {
     background-size: 24px;
     font-size: 1.5rem;

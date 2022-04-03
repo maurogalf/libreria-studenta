@@ -82,13 +82,14 @@ export default function Cart() {
                 <tr className="linea-carrito">
                 <td><img src={i.img} alt={i.nombre}/></td>
                 <td>{i.id}</td>
-                <td>{i.nombre}</td>
+                <td><Link to ={`/item/${i.id}`}><spam className='verArticulo'>{i.nombre}</spam></Link></td>
                 <td className="tb-c">${Intl.NumberFormat("de-DE").format(i.precio)}</td>
                 <td className="tb-c">{i.cant}</td>
                 <td className="tb-c">${Intl.NumberFormat("de-DE").format(i.precio * i.cant)}</td>
                 <td className="tb-c"><button className='btn-remItem' onClick={()=>removeItem(i.id, i.cant)}>X</button></td>
-                </tr>)})}
-                <tr className="linea-carrito">
+                </tr>
+                )})}
+                <tr className="linea-carrito  linea-total">
                 <td></td>
                 <td></td>
                 <td></td>
@@ -103,6 +104,7 @@ export default function Cart() {
             onSubmit={handlerSubmit}
             onChange={handlerChange}
             className='formulario'>
+                <div><h2 className='formulario__titulo'>Ingrese sus datos</h2></div>
             <div class="formulario__campos">
                 <div class="formulario__campos--izq">
                     <label>Nombre: </label><input type="text" name="nombre"/>
