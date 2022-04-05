@@ -37,7 +37,7 @@ export default function ItemDetail({producto, sum, rest, count, agregaCarrito, v
             </div>
         </div>
             :
-            <img className='loading' src='../loading.gif' alt='Loading'/>
+            <img className='loading' src='https://firebasestorage.googleapis.com/v0/b/libreria-studenta.appspot.com/o/img%2Floading.gif?alt=media&token=cd9e0cdf-dc55-42fe-8ce4-9e346847875d' alt='Loading'/>
             }
             </>
     )}

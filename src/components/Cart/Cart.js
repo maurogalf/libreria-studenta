@@ -17,9 +17,8 @@ export default function Cart() {
     const [buyer, setBuyer] = useState(initialBuyer)
     
     const handlerChange = (e)=> {
-        setBuyer({... buyer, [e.target.name]: e.target.value})
+        setBuyer({...buyer,[e.target.name]:e.target.value})
     }
-
     const handlerSubmit = (e)=>{
         e.preventDefault();
         if(buyer.nombre !== "" && buyer.apellido !== "" && buyer.telefono !== "" && buyer.email !== ""){
@@ -58,8 +57,8 @@ export default function Cart() {
             {cart.length === 0 ? (
                 <>
                 <h1>El carrito se encuentra vacío.</h1>
-                <img className='emptyCartImage' src='./cartEmpty.png' alt='Carrito Vacio'/>
-                <Link to={"/"}><button className='btn-vaciarCarrito'>Volver al inicio</button></Link>
+                <img className='emptyCartImage' src='https://firebasestorage.googleapis.com/v0/b/libreria-studenta.appspot.com/o/img%2FcartEmpty.png?alt=media&token=ec63e9b3-3dbb-47a7-9d2b-99cf057895a9' alt='Carrito Vacio'/>
+                <Link to={"/libreria-studenta"}><button className='btn-vaciarCarrito'>Volver al inicio</button></Link>
                 </>)
                 :
                 <>
@@ -105,25 +104,25 @@ export default function Cart() {
             onChange={handlerChange}
             className='formulario'>
                 <div><h2 className='formulario__titulo'>Ingrese sus datos</h2></div>
-            <div class="formulario__campos">
-                <div class="formulario__campos--izq">
+            <div className="formulario__campos">
+                <div className="formulario__campos--izq">
                     <label>Nombre: </label><input type="text" name="nombre"/>
                 </div>
-                <div class="formulario__campos--izq">
+                <div className="formulario__campos--izq">
                     <label>Apellido: </label><input type="text" name="apellido"/>
                 </div>
             </div>
-            <div class="formulario__campos">
-                <div class="formulario__campos--izq">
+            <div className="formulario__campos">
+                <div className="formulario__campos--izq">
                     <label>Teléfono: </label><input type="number" name="telefono"/>
                 </div>
-                <div class="formulario__campos--izq">
+                <div className="formulario__campos--izq">
                     <label>Email: </label><input type="text" name="email"/>
                 </div>
             </div>
-            <div class="formulario__campos">
-                <div class="formulario__campos--cen"><button className='btn-vaciarCarrito'>Enviar Orden</button></div>
-                <div class="formulario__campos--cen"><button className='btn-vaciarCarrito' onClick={()=>cleanCart()}>Vaciar Carrito</button></div>
+            <div className="formulario__campos">
+                <div className="formulario__campos--cen"><button className='btn-vaciarCarrito'>Enviar Orden</button></div>
+                <div className="formulario__campos--cen"><button className='btn-vaciarCarrito' onClick={()=>cleanCart()}>Vaciar Carrito</button></div>
             </div>
         </form>
         </>}

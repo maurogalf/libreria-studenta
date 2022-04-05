@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react'
 
 const ItemListContainer = (props) =>{
     const {categoryId} = useParams();
-    console.log(categoryId)
     const [productos, setProducts] = useState([]);
 
     useEffect(() => { categoryId !== undefined ? getDataCategory(): getData()},[categoryId]);
@@ -28,7 +27,7 @@ const ItemListContainer = (props) =>{
             const itemsCollection = collection(db, "items")
             const col = await getDocs(itemsCollection)
             const result = col.docs.map((doc) => doc = {id:doc.id, ...doc.data()})
-            setProducts(result.filter(e=>e.categoria == categoryId))
+            setProducts(result.filter(e=>e.categoria === categoryId))
         } catch (error) {
             console.log('error', error);
         }

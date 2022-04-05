@@ -1,0 +1,50 @@
+00:57:38	[Tutor] Federico Aletti:	Ultima clase 🤩
+00:59:52	Mauro Gabriel Alfonso:	🙌
+01:19:43	Fredy Alexander Chaparro Castro:	https://stackblitz.com/edit/react
+01:19:54	Fredy Alexander Chaparro Castro:	https://docs.google.com/document/d/1uvAQVjD3C3klUKAMi07QTlpQnUzZgBGEORT3-lcFZzM/edit
+01:27:48	Pablo Groba:	se podria hacer un solo state, q sea un objeto q tenga todo eso no?
+01:28:14	Pablo Groba:	las funciones hacen todo lo mismo, podria ser una sola
+01:28:24	Roberto Ojeda:	muchos styles en linea
+01:29:07	Pablo Groba:	luego los divs se repiten podria ser un componente
+01:29:15	Pablo Groba:	y llamarlo 3 veces
+01:30:32	Pablo Groba:	por parametron pasarle las funciones y el texto
+01:32:31	Carlos Sandin:	por rutas?
+01:33:23	Pablo Groba:	ah como children?
+01:33:24	Roberto Ojeda:	pasarlo por propz
+01:33:28	Carlos Sandin:	de padre a hijo
+01:35:11	Pablo Groba:	el style del button esta vacio
+01:36:21	Pablo Groba:	y las funciones se podrian llamar sin hacerlo con la function de flecha no? podria llamarse a la function y por defecto reciben ese dato
+01:44:22	Pablo Groba:	para poder poner codigo en js, interpolar
+01:44:49	Roberto Ojeda:	x para usar código JS Lógica
+01:53:42	Roberto Ojeda:	alguna manera de evitar 3 llamadas al mismo componente?
+01:57:54	Roberto Ojeda:	perfecto Gracias!!!
+01:58:05	Pablo Groba:	👍
+02:21:39	[Tutor] Emanuel Acosta:	Chicos/as, cualquier cosa estoy en el chat de la plataforma! No se queden con dudas, me hablan por ahi si necesitan algo o estan trabados!
+02:26:41	Mauro Gabriel Alfonso:	Dale
+02:28:16	[Tutor] Fernando Galdos:	Igual conmigo chic@s, cualquier duda nos escriben
+02:29:51	tomas juarez:	hay algún ejemplo de readme como para tener de referencia?
+02:30:58	[Tutor] - Rodrigo Maestre:	Aca hay una plantilla de ejemplo por si sirve: https://gist.github.com/Villanuevand/6386899f70346d4580c723232524d35a
+02:31:59	Pablo Groba:	yo creo que el que te da react por defecto mas agregarle algo puntual de nuestro proyecto, ya esta bien
+02:32:18	Carlos Sandin:	ok
+02:32:24	tomas juarez:	dale gracias!
+02:32:37	[Tutor] Fernando Galdos:	Aqui les comparto una hoja con los comandos para escribir en markdown https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images
+02:34:10	Adrian Camacho:	entonces, en general en proyectos y empresas se recomiendaría utilizar typescript?
+02:36:21	[Tutor] - Rodrigo Maestre:	Para el proyecto final no se olviden de revisar las rubricas de evaluación:https://drive.google.com/drive/u/0/folders/1it75J__HgWHwVDHGcvLpXsUjE2V9DXn1
+02:36:21	Adrian Camacho:	ahh ok, gracias!
+02:41:54	Mauro Gabriel Alfonso:	Genial Fredy! Gracias por los consejos}
+02:42:23	[Tutor] - Rodrigo Maestre:	Muy buena cursada profe !!!
+02:42:24	Pablo Groba:	muy buena cursada! gracias por todo!
+02:42:35	Mauro Gabriel Alfonso:	🙌
+02:42:44	Carlos Sandin:	gracias profe
+02:42:45	[Tutor] - Rodrigo Maestre:	Saludos a todos. Y cualquier consulta no duden en contactarme por el chat !
+02:43:08	Mauro Gabriel Alfonso:	Exitos chicos!
+02:43:14	Adrian Camacho:	muchas gracias!
+02:43:17	tomas juarez:	gracias a todos!
+02:43:20	[Tutor] Fernando Galdos:	Saludos a tod@s! Un gusto haberlos acompañado
+02:43:22	[Coordinador]Santiago Migueles:	Mucha merda chicos
+02:43:32	Emmanuel Zonni:	Muchas gracias y saludos a todos!
+02:43:40	Sebas Taboada:	Muchas gracias por todo Fredy y a los tutores tb gracias por la Buena onda
+02:43:59	[Tutor] Fernando Galdos:	Buenas noches!
+02:44:00	Santiago Nielsen:	gracias profe, muy buena la cursada
+02:44:05	tomas juarez:	nos vemos !
+02:44:11	[Tutor] Federico Aletti:	Nos vemos!
